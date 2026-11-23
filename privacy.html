@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kidfort Privacy Policy</title>
+<style>
+  :root { --fg:#14171c; --muted:#5b6372; --bg:#ffffff; --accent:#3949ab; --card:#eef0fa; }
+  @media (prefers-color-scheme: dark) { :root { --fg:#e2e4ea; --muted:#a3abb5; --bg:#101216; --accent:#bac3ff; --card:#1c2030; } }
+  html { background: var(--bg); }
+  body { font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--fg); background: var(--bg);
+         max-width: 720px; margin: 0 auto; padding: 24px 16px 64px; }
+  h1 { font-size: 1.6rem; margin-bottom: .25rem; }
+  h2 { font-size: 1.15rem; margin-top: 2rem; color: var(--accent); }
+  .muted { color: var(--muted); font-size: .9rem; }
+  .box { background: var(--card); border-radius: 12px; padding: 12px 16px; }
+  a { color: var(--accent); }
+  hr { border: 0; border-top: 1px solid var(--card); margin: 3rem 0; }
+  nav a { margin-right: 1rem; }
+  table { border-collapse: collapse; width: 100%; font-size: .95rem; }
+  td, th { text-align: left; vertical-align: top; padding: 6px 8px; border-bottom: 1px solid var(--card); }
+  code { font-size: .9em; }
+</style>
+</head>
+<body>
+
+<nav class="muted"><a href="#en">English</a><a href="#id">Bahasa Indonesia</a></nav>
+
+<section id="en">
+<h1>Kidfort Privacy Policy</h1>
+<p class="muted">Effective 23 November 2026 · Developer: Jalu (Indonesia) · Contact: <a href="mailto:jalurahadi+kidfort@gmail.com">jalurahadi+kidfort@gmail.com</a></p>
+
+<div class="box">
+  <strong>In short:</strong> Kidfort is a parental control service made of the <strong>Kidfort Parent</strong> app, the
+  <strong>Kidfort Kids</strong> app and the Kidfort server. A parent or legal guardian uses it to supervise a child's
+  Android phone. We collect only what that supervision needs. We never read messages, photos, or what is on the screen,
+  and we do not sell data or show ads.
+</div>
+
+<p>The parent creates the account, installs Kidfort Kids on the child's phone and is responsible for telling the child
+that the phone is supervised. Kidfort Kids shows a permanent notice on the child's phone that it is supervised. It has no
+hidden mode and does not hide its icon.</p>
+
+<h2>1. What we collect</h2>
+<p><strong>Parent account</strong></p>
+<ul>
+  <li>Email address and a password (stored only as a bcrypt hash).</li>
+  <li>Language setting and, only if push notifications are enabled, a Firebase push token.</li>
+</ul>
+<p><strong>Child profile</strong> (entered by the parent)</p>
+<ul>
+  <li>First name or nickname and, optionally, the year of birth.</li>
+</ul>
+<p><strong>Child's phone</strong> (sent by Kidfort Kids)</p>
+<ul>
+  <li>Device information: manufacturer, model, Android version, app version, time zone, language, battery level, network
+    type (Wi-Fi or mobile) and the last time it was online.</li>
+  <li>Installed apps: package name, app name and install time, so the parent can allow or block them.</li>
+  <li>App usage: minutes per app per day, and the times each app was opened and closed (activity history). <strong>No
+    content</strong> of what is done inside apps.</li>
+  <li>Websites visited: the <strong>site name</strong> (for example <code>youtube.com</code>) the phone looked up, the
+    time, and whether the web filter blocked it. Never full addresses, pages, search terms or anything typed. Ads and
+    trackers are left out.</li>
+  <li>Location: GPS position with accuracy and time, <strong>only</strong> when the parent turned on location reports or
+    pressed "Locate now".</li>
+  <li>Protection status: whether the permissions, the web filter, the clock and the device owner setting are intact.</li>
+  <li>Requests the child sends (for example "more time" or "unlock this app") and the parent's answer.</li>
+  <li>Rules set by the parent (blocked apps, limits, schedules, web filter settings) and commands (lock, ring, locate)
+    with their result.</li>
+</ul>
+<p><strong>What we never collect:</strong> messages, chats, emails, call contents or call logs, contacts, photos, videos,
+screenshots or screen recordings, microphone or camera recordings, keystrokes, passwords, full web addresses, page
+contents or search terms. The web filter runs <strong>on the child's phone</strong>. Only the site names listed above are
+sent, for the parent's activity history.</p>
+
+<h2>2. Why we use it</h2>
+<p>Only to provide the supervision the parent sets up: enforcing rules on the child's phone, showing the parent status,
+usage, location and requests, sending alerts (tampering, phone offline), and keeping the service secure (rate limits,
+preventing abuse). Legal basis (GDPR): performance of the contract with the parent (Art. 6(1)(b)) and, for the child's
+data, the parent's consent as the holder of parental responsibility. We do <strong>not</strong> sell data, show ads,
+build advertising profiles, or use the data to train AI models.</p>
+
+<h2>3. Who receives data</h2>
+<ul>
+  <li><strong>Our hosting provider</strong> Vultr, which stores the server data in Singapore.</li>
+  <li><strong>Google Firebase Cloud Messaging</strong>, only if push is enabled. It delivers short wake-up messages ("sync",
+    "new event") without personal content.</li>
+  <li><strong>OpenStreetMap tile servers</strong> (tile.openstreetmap.org), when the parent opens the location map: the
+    parent's phone downloads map images for the area shown. OpenStreetMap sees the IP address of the parent's phone and
+    the map area, but not the child's position data. See the
+    <a href="https://osmfoundation.org/wiki/Privacy_Policy">OSMF privacy policy</a>.</li>
+  <li><strong>Public DNS resolvers</strong> that the child's phone uses to look up websites (the network's DNS, with
+    Cloudflare 1.1.1.1 or Google 8.8.8.8 as fallback), as on any Android phone.</li>
+  <li>Authorities, only when the law requires it.</li>
+</ul>
+
+<h2>4. How long we keep it</h2>
+<table>
+  <tr><th>Data</th><th>Kept</th></tr>
+  <tr><td>Location points</td><td>7 days</td></tr>
+  <tr><td>Daily app usage</td><td>90 days</td></tr>
+  <tr><td>App and website history</td><td>30 days</td></tr>
+  <tr><td>Requests, alerts and events</td><td>180 days</td></tr>
+  <tr><td>Account, child profiles, rules, device information</td><td>until the parent deletes them or the account</td></tr>
+</table>
+<p>Deleted data is removed from the live database immediately, and from any server backups within 30 days.</p>
+
+<h2>5. Security</h2>
+<p>All connections use HTTPS with a certificate pinned in the apps. Passwords are hashed with bcrypt, device credentials are
+stored only as hashes, and secrets on the phones are kept in the Android Keystore. Only the parent account that owns the
+data can access it.</p>
+
+<h2>6. Parents' choices and rights</h2>
+<p>In Kidfort Parent › Settings:</p>
+<ul>
+  <li><strong>Export my data</strong> downloads everything stored about the account and its children as a JSON file.</li>
+  <li><strong>Delete account</strong> permanently deletes the account, children, rules, reports and locations.</li>
+</ul>
+<p>For each phone, the parent can turn location reports off, delete a child, or use <strong>Remove supervision</strong>,
+which removes all restrictions from the phone. Under GDPR, Indonesia's Personal Data Protection Law (UU PDP No. 27/2022) and
+similar laws, you may also request access, correction, deletion, restriction or portability, object to processing, and
+complain to your data protection authority. Contact us at
+<a href="mailto:jalurahadi+kidfort@gmail.com">jalurahadi+kidfort@gmail.com</a>.</p>
+<p>A child or teenager with questions about the supervision should talk to their parent, and may also contact us at the
+address above.</p>
+
+<h2>7. Children</h2>
+<p>Kidfort processes children's data only on behalf of, and as instructed by, their parent or guardian, who confirms this
+when creating the account. We do not knowingly accept parent accounts from people under 18.</p>
+
+<h2>8. Changes</h2>
+<p>We will post changes on this page and update the effective date above. Significant changes are announced in the
+Kidfort Parent app.</p>
+
+<h2>9. Contact</h2>
+<p>Jalu (Indonesia) · <a href="mailto:jalurahadi+kidfort@gmail.com">jalurahadi+kidfort@gmail.com</a></p>
+</section>
+
+<hr>
+
+<section id="id">
+<h1>Kebijakan Privasi Kidfort</h1>
+<p class="muted">Berlaku sejak 23 November 2026 · Pengembang: Jalu (Indonesia) · Kontak: <a href="mailto:jalurahadi+kidfort@gmail.com">jalurahadi+kidfort@gmail.com</a></p>
+
+<div class="box">
+  <strong>Singkatnya:</strong> Kidfort adalah layanan kontrol orang tua yang terdiri dari aplikasi <strong>Kidfort
+  Parent</strong>, aplikasi <strong>Kidfort Kids</strong>, dan server Kidfort. Orang tua atau wali memakainya untuk
+  mengawasi HP Android anak. Kami hanya mengumpulkan data yang dibutuhkan untuk pengawasan itu. Kami tidak pernah membaca
+  pesan, foto, atau isi layar, dan tidak menjual data atau menampilkan iklan.
+</div>
+
+<p>Orang tua membuat akun, memasang Kidfort Kids di HP anak, dan bertanggung jawab memberi tahu anak bahwa HP-nya diawasi.
+Kidfort Kids menampilkan pemberitahuan tetap di HP anak bahwa HP tersebut diawasi. Aplikasi ini tidak punya mode
+tersembunyi dan tidak menyembunyikan ikonnya.</p>
+
+<h2>1. Data yang kami kumpulkan</h2>
+<p><strong>Akun orang tua</strong></p>
+<ul>
+  <li>Alamat email dan kata sandi (hanya disimpan sebagai hash bcrypt).</li>
+  <li>Pengaturan bahasa dan, hanya jika notifikasi push aktif, token push Firebase.</li>
+</ul>
+<p><strong>Profil anak</strong> (diisi oleh orang tua)</p>
+<ul>
+  <li>Nama depan atau nama panggilan dan, jika diisi, tahun lahir.</li>
+</ul>
+<p><strong>HP anak</strong> (dikirim oleh Kidfort Kids)</p>
+<ul>
+  <li>Informasi perangkat: merek, model, versi Android, versi aplikasi, zona waktu, bahasa, level baterai, jenis jaringan
+    (Wi-Fi atau seluler), dan waktu terakhir online.</li>
+  <li>Aplikasi terpasang: nama paket, nama aplikasi, dan waktu pemasangan, agar orang tua bisa mengizinkan atau
+    memblokirnya.</li>
+  <li>Pemakaian aplikasi: menit per aplikasi per hari, serta jam setiap aplikasi dibuka dan ditutup (riwayat aktivitas).
+    <strong>Tidak ada isi</strong> dari apa yang dilakukan di dalam aplikasi.</li>
+  <li>Situs yang dikunjungi: <strong>nama situs</strong> (misalnya <code>youtube.com</code>) yang dicari HP, waktunya, dan
+    apakah filter web memblokirnya. Tidak pernah alamat lengkap, isi halaman, kata pencarian, atau apa pun yang diketik.
+    Iklan dan pelacak tidak dicatat.</li>
+  <li>Lokasi: posisi GPS beserta akurasi dan waktunya, <strong>hanya</strong> jika orang tua menyalakan laporan lokasi
+    atau menekan "Cari sekarang".</li>
+  <li>Status perlindungan: apakah izin, filter web, jam, dan pengaturan pemilik perangkat masih utuh.</li>
+  <li>Permintaan yang dikirim anak (misalnya "tambah waktu" atau "buka aplikasi ini") dan jawaban orang tua.</li>
+  <li>Aturan yang dibuat orang tua (aplikasi diblokir, batas waktu, jadwal, pengaturan filter web) dan perintah (kunci,
+    bunyikan, cari lokasi) beserta hasilnya.</li>
+</ul>
+<p><strong>Yang tidak pernah kami kumpulkan:</strong> pesan, obrolan, email, isi panggilan atau riwayat panggilan, kontak,
+foto, video, tangkapan atau rekaman layar, rekaman mikrofon atau kamera, ketikan, kata sandi, alamat web lengkap, isi
+halaman, atau kata pencarian. Filter web berjalan <strong>di HP anak</strong>. Hanya nama situs seperti di atas yang
+dikirim, untuk riwayat aktivitas orang tua.</p>
+
+<h2>2. Untuk apa data dipakai</h2>
+<p>Hanya untuk menjalankan pengawasan yang diatur orang tua: menerapkan aturan di HP anak, menampilkan status, pemakaian,
+lokasi, dan permintaan kepada orang tua, mengirim peringatan (perlindungan dimatikan, HP offline), dan menjaga keamanan
+layanan (pembatasan permintaan, mencegah penyalahgunaan). Dasar hukum (GDPR): pelaksanaan perjanjian dengan orang tua
+(Pasal 6(1)(b)) dan, untuk data anak, persetujuan orang tua sebagai pemegang tanggung jawab orang tua. Kami
+<strong>tidak</strong> menjual data, menampilkan iklan, membuat profil iklan, atau memakai data untuk melatih AI.</p>
+
+<h2>3. Siapa yang menerima data</h2>
+<ul>
+  <li><strong>Penyedia hosting kami</strong>, Vultr, yang menyimpan data server di Singapura.</li>
+  <li><strong>Google Firebase Cloud Messaging</strong>, hanya jika push aktif. Layanan ini mengirim pesan singkat
+    ("sinkron", "kejadian baru") tanpa isi pribadi.</li>
+  <li><strong>Server peta OpenStreetMap</strong> (tile.openstreetmap.org), saat orang tua membuka peta lokasi: HP orang tua
+    mengunduh gambar peta untuk area yang ditampilkan. OpenStreetMap melihat alamat IP HP orang tua dan area peta, tetapi
+    tidak melihat data posisi anak. Lihat
+    <a href="https://osmfoundation.org/wiki/Privacy_Policy">kebijakan privasi OSMF</a>.</li>
+  <li><strong>Server DNS publik</strong> yang dipakai HP anak untuk mencari alamat situs (DNS dari jaringan, dengan
+    Cloudflare 1.1.1.1 atau Google 8.8.8.8 sebagai cadangan), seperti di HP Android mana pun.</li>
+  <li>Pihak berwenang, hanya jika diwajibkan oleh hukum.</li>
+</ul>
+
+<h2>4. Berapa lama data disimpan</h2>
+<table>
+  <tr><th>Data</th><th>Disimpan</th></tr>
+  <tr><td>Titik lokasi</td><td>7 hari</td></tr>
+  <tr><td>Pemakaian aplikasi harian</td><td>90 hari</td></tr>
+  <tr><td>Riwayat aplikasi dan situs</td><td>30 hari</td></tr>
+  <tr><td>Permintaan, peringatan, dan kejadian</td><td>180 hari</td></tr>
+  <tr><td>Akun, profil anak, aturan, informasi perangkat</td><td>sampai orang tua menghapusnya atau menghapus akun</td></tr>
+</table>
+<p>Data yang dihapus langsung hilang dari database aktif, dan dari cadangan server (jika ada) dalam 30 hari.</p>
+
+<h2>5. Keamanan</h2>
+<p>Semua koneksi memakai HTTPS dengan sertifikat yang dikunci (pinned) di aplikasi. Kata sandi di-hash dengan bcrypt,
+kredensial perangkat hanya disimpan sebagai hash, dan rahasia di HP disimpan di Android Keystore. Hanya akun orang tua
+pemilik data yang bisa mengaksesnya.</p>
+
+<h2>6. Pilihan dan hak orang tua</h2>
+<p>Di Kidfort Parent › Setelan:</p>
+<ul>
+  <li><strong>Ekspor data saya</strong> mengunduh semua data akun dan anak-anaknya sebagai file JSON.</li>
+  <li><strong>Hapus akun</strong> menghapus permanen akun, anak, aturan, laporan, dan lokasi.</li>
+</ul>
+<p>Untuk setiap HP, orang tua bisa mematikan laporan lokasi, menghapus anak, atau memakai <strong>Hapus pengawasan</strong>,
+yang menghapus semua batasan dari HP tersebut. Berdasarkan GDPR, UU Pelindungan Data Pribadi (UU PDP No. 27/2022), dan
+undang-undang serupa, Anda juga dapat meminta akses, perbaikan, penghapusan, pembatasan, atau pemindahan data, menolak
+pemrosesan, dan mengadu ke otoritas pelindungan data. Hubungi kami di
+<a href="mailto:jalurahadi+kidfort@gmail.com">jalurahadi+kidfort@gmail.com</a>.</p>
+<p>Anak atau remaja yang punya pertanyaan tentang pengawasan sebaiknya berbicara dengan orang tuanya, dan juga boleh
+menghubungi kami di alamat di atas.</p>
+
+<h2>7. Anak-anak</h2>
+<p>Kidfort memproses data anak hanya atas nama, dan sesuai instruksi, orang tua atau walinya, yang menyatakan hal ini saat
+membuat akun. Kami tidak dengan sengaja menerima akun orang tua dari orang berusia di bawah 18 tahun.</p>
+
+<h2>8. Perubahan</h2>
+<p>Perubahan akan kami terbitkan di halaman ini dengan tanggal berlaku yang baru. Perubahan penting diumumkan di aplikasi
+Kidfort Parent.</p>
+
+<h2>9. Kontak</h2>
+<p>Jalu (Indonesia) · <a href="mailto:jalurahadi+kidfort@gmail.com">jalurahadi+kidfort@gmail.com</a></p>
+</section>
+
+</body>
+</html>
